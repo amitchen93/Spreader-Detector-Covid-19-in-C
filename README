@@ -1,0 +1,38 @@
+Name: עמית חן 
+ID: 308162502
+CS-USER: amitchen93
+
+SpreaderDetectorBackend
+-----------------------------
+Please explain how you dealt with the following parts of the exam.
+
+Input processing
+----------------
+.Reading lines of texts with the help of "buffers" and loops I checked that the files were valid
+ and converted them to strings. I used built-in functions or my implementations to Convert the strings to other
+ values ​​(like numbers). I first read from the first file (description in the information storage section).
+ I read similarly "Meetings" file (details in the next section). It should be noted that following changes that staff made 
+ I lost a lot of time on the exam and had to use 2 global variables, knowing that it would lower my score a bit
+ (I mean I know it's not recommended but I had no choice and preferred a plan that works rather than submit nothing :)
+
+
+Data storing
+------------
+I transferred info from the "people" to "person" data structures (personal details) and tree where people stored by ID.
+ This because each person has own ID ,and if we classify the tree that way we can save run-time in retrieving people
+ . I wanted to create an array with dynamic memory allocation and sort it with built-in language sorting But 
+ due to changes the staff made during the exam I had to change direction, not balance the trees
+assuming it would hurt my grade if I got bad input  And implement another tree where I sorted people 
+By their probabilities. Although I implemented two similar structures (trees) but maybe that way I managed
+ to save running time and be more efficient. What's more, the memory tree is not necessarily continuous
+ (assignments separately and link) compared to an array that is necessarily continuous - which is a nice feature.
+
+
+Results sorting
+---------------
+Having a tree sorted by a person's probability of being sick - I printed from it recursively
+(Rightmost - Biggest, Leftmost - Smallest) the people into the desired format. The calculation of the probabilities
+I did not get the most accurate numeric (I noticed that for small numbers the computer "rounded" results)
+  But to my understanding this is natural behavior in these cases.
+ Finally I printed an appropriate message for the person according to the threshold set in the reference file
+(I made sure to use variables and not numeric values as requested)
